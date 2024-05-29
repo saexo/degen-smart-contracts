@@ -10,7 +10,7 @@ const AIRDROP_CLAIM_DEADLINE = Math.round(
 );
 
 const AIRDROP_MERKLE_ROOT =
-  '0x66b93d149252a6c6774bb728e1b4e79ba5e887c9b9cf124d3766e0e85c76c79f';
+  '0x27fec61a3bdf078b258f697120a6c741295bfc5609cafbd5bd21596d6d46bb34';
 
 const LiquidityMiningAirdrop2 = buildModule('LiquidityMiningAirdrop2', (m) => {
   /**
@@ -28,7 +28,7 @@ const LiquidityMiningAirdrop2 = buildModule('LiquidityMiningAirdrop2', (m) => {
   /**
    * Contracts
    */
-  const degenAirdrop = m.contract('DegenAirdrop1', [
+  const degenAirdrop = m.contract('GreenCandleAirdrop', [
     DEGEN_TOKEN,
     airdropMerkleRoot,
     airdropClaimDeadline,

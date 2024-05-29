@@ -9,19 +9,15 @@ dotenv.config();
 const config: HardhatUserConfig = {
   networks: {
     // for mainnet
-    base_mainnet: {
-      url: process.env.ALCHEMY_BASE_MAINNET_RPC_URL as string,
+    arbi_sepolia: {
+      url: process.env.ALCHEMY_ARBI_SEPOLIA_RPC_URL as string,
       accounts: [process.env.PRIVATE_KEY as string],
     },
     // for testnet
     base_sepolia: {
       url: process.env.ALCHEMY_BASE_SEPOLIA_RPC_URL as string,
       accounts: [process.env.PRIVATE_KEY as string],
-    },
-    degen_sepolia: {
-      url: process.env.CONDUIT_DEGEN_SEPOLIA_RPC_URL as string,
-      accounts: [process.env.PRIVATE_KEY as string],
-    },
+    }
   },
   etherscan: {
     apiKey: {
